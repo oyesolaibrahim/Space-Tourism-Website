@@ -217,16 +217,32 @@ main {
 @media screen and (max-width:430px) { 
 main {
  
+    .space-launch  {
+        margin-top: 150px;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+         span {
+            margin-right: 10px;
+        }
+    }
     div div div .selection-buttons {
-            margin-top: 0px;
-            .second-button {
+        margin-top: -100px;
+           
+        .button {
+            width: 60px;
+            border-radius: 50%;
+            margin: auto;
+            padding: 18px;
+        } 
+        .second-button {
                 margin: auto 40px;
             }
     }
 
     div div div .description {
-        
+    margin-top: 0px;        
         div h3 {
+
             font-size: 1rem;
         }
         div h1 {
@@ -247,12 +263,6 @@ main {
     div div div .selection-buttons {
             margin-top: -150px;
             
-        .button {
-            width: 60px;
-            border-radius: 50%;
-            margin: auto;
-            padding: 18px;
-        }
             .second-button {
                 margin: auto 20px;
             }

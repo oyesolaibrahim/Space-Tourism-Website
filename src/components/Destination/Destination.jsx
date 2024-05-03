@@ -128,8 +128,7 @@ const Destination = () => {
                                 {description}
                             </p>
                         </div>
-                        <div></div>
-                        <div>
+                        <div className="desination-footer">
                             <hr className="planet-hr"></hr>
                             <div className="flex distance-time">
                                 <div className="column distance">

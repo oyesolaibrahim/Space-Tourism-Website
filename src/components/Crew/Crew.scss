@@ -134,11 +134,14 @@
             margin: auto;
             margin-top: 100px;
         }
-        div.image .crew-img {
+        div.image {
             display: inline-block;
-            width: 100%;
-            margin: auto;
-            margin-top: 79px;
+            .crew-img {
+                width: 100%;
+                margin: auto;
+                margin-top: 80px;
+            
+            }
         }
        }
     }    
@@ -202,10 +205,10 @@
 }
 @media screen and (max-width:440px) {
     .crew {
-            height: 1460px;
         main { 
             
             .meet  {
+                margin-top: 150px;
                 font-size: 1.2rem;
                 letter-spacing: 1px;
                  span {

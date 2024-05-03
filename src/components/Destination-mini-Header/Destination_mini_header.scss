@@ -1,0 +1,68 @@
+
+.planet {
+    width: 285.5px;
+    height: 34px;
+
+    div {
+        cursor: pointer;
+    }
+    
+    div P {
+        color: #D0D6F9;
+        position: relative;
+    }
+    div hr {
+        border: 3px solid white;
+        display: none;
+        position: absolute;
+        top: 64%;
+    }
+    div p.moon {
+        width: 39px;
+        height: 19px;
+    }
+    div hr.hr-moon {
+        width: 41px;
+    } 
+    div p.mars {
+        width: 37px;
+        height: 19px;
+        margin-left: 36px;
+    }
+    div hr.hr-mars {
+        width: 37px;;
+        margin-left: 36px;
+    } 
+    div p.europa {
+        width: 56px;
+        height: 19px;
+        margin-left: 36px;
+    }
+    div hr.hr-europa {
+        width: 48px;
+        margin-left: 36px;
+    } 
+    div p.titan {
+        width: 41px;
+        height: 19px;
+        margin-left: 36px;
+    }
+    div hr.hr-titan {
+        width: 42px;
+        margin-left: 36px;
+    } 
+   }
+
+@media screen and (max-width:1100px) {
+
+    .planet {
+        width: 285.5px;
+        height: 34px;
+    
+        div hr {
+            display: none;
+            position: absolute;
+            top: -64%;
+        }
+    }
+}

@@ -1,0 +1,230 @@
+header {
+    height: 96px;
+
+    div.logo {
+        margin-left: 55px;
+        width: 48px;
+        height: 48px;
+        margin-top: 64px;
+    }
+
+    .horizontal-line {
+        border: 1px solid white;
+        width: 473px;
+        height: 1px;
+        margin-top: 70px;
+        margin-left: 64px;
+        }
+    .menu {
+        background-color: rgba(255, 255, 255, 0.04); 
+        backdrop-filter: blur(80px); 
+        width: 730px;
+        height: 96px;
+        margin-top: 70px;
+        font-size: 12px;
+        text-transform: uppercase;
+       /* padding-left: 50px;
+*/
+
+.p-home { 
+width: 80px;
+margin-left: 80px;
+}
+.p-home,.p-destination, .p-crew, .p-technology {
+height: 19px;
+letter-spacing: 2.7px;
+position: relative;
+}
+.hr-home {
+width: 70px;
+margin-left: 80px;
+}
+.hr-home, .hr-destination, .hr-crew, .hr-technology {
+position: absolute;
+bottom:0px;
+border: 3px solid white            
+}
+.no-display {
+    display: none;
+}
+.display {
+    display: inline-block;            
+}       
+.p-destination {
+width: 130px;
+}
+
+.hr-destination {
+width: 130px;
+}
+.p-crew {
+width: 75px;
+}
+.hr-crew {
+width: 75px;
+}
+.p-technology {
+width: 140px;
+margin-right: 150px;
+}
+.hr-technology {
+width: 140px;
+}
+    }
+    .menu p {
+        cursor: pointer;
+    }
+    
+    i.fa {
+        font-size: 2rem;
+        margin-right: 50px;
+        cursor: pointer;
+        display: none;
+        color: #D0D6F9;
+    }
+}
+
+@media screen and (max-width:1100px) {
+ header {
+    .horizontal-line {
+        display: none;
+    }
+    .menu {
+        width: 600px;
+    }
+    div.logo, .menu {
+        margin-top: 0px;
+        
+.p-home { 
+    margin-left: 80px;
+    }
+    .p-home,.p-destination, .p-crew, .p-technology {
+    letter-spacing: 2.36px;
+        span {
+            display: none;
+        }
+    }
+    .hr-home {
+    margin-left: 5px;
+    }
+    
+    .hr-destination {
+    margin-right: 100px;
+    }
+    
+    .hr-crew {
+    margin-left: 0px;
+    }
+    
+    .hr-technology {
+    margin-right: 10000px;
+    }
+    .p-technology {
+    margin-right: 0px;
+    }
+    
+    }
+ }   
+}
+
+@media screen and (max-width:950px) {
+    header {
+         .menu {
+            width: 550px;
+     
+}
+}
+}
+
+@media screen and (max-width:720px) {
+
+    header {
+        i.fa {
+            display: inline-block;
+            z-index: 99;
+            position: fixed;
+            right: 0%;
+        }
+        i.fa-times {
+            display: none;
+            z-index: 99;
+        }
+        #open {
+            display: inline-block;
+        }
+        #close {
+            display: none;
+        }
+        
+        .menu {
+            backdrop-filter: blur(81.55px); 
+            width: 63%;
+            height: 100%;
+            position: fixed;
+            bottom: 0px;
+            padding-left: 40px;
+            flex-direction: column;
+            justify-content: flex-start;
+            transition: 1s;
+            align-items: flex-start;
+           z-index: 88;             
+
+            span {
+                display: inline-block;
+            }
+            .hr-crew, .hr-destination, .hr-home, .hr-technology {
+                display: none;
+            }
+          
+        .p-home,.p-destination, .p-crew, .p-technology {
+            margin: 20px auto;
+            font-size: 1.2rem;
+            min-width: 500px;
+            text-align: left;
+
+        span {
+                display: inline-block;
+            }
+        }
+        .p-home {
+            margin-top: 150px;
+        }    
+        }
+        .right {
+            right: -65%;
+        }
+        #slide {
+            right: 0px;
+        }    
+     }
+}
+    
+@media screen and (max-width:450px) {
+    header {
+        
+        .menu {
+                        
+        .p-home,.p-destination, .p-crew, .p-technology {
+            font-size: 1rem;
+        }
+        .p-home {
+            margin-top: 150px;
+        }    
+        }    
+     }
+}
+@media screen and (max-width:300px) {
+    header {
+        
+        .menu {
+            width: 75%;               
+        .p-home,.p-destination, .p-crew, .p-technology {
+            font-size: 0.8rem;
+        }   
+        }    
+     
+        .right {
+            right: -75%;
+        }
+    }
+}

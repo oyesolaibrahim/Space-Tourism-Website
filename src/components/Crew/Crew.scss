@@ -1,0 +1,242 @@
+
+.flex, .start, .column {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.start {
+    justify-content: flex-start;
+    align-items: center;
+}
+.column {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.crew {
+    background-image: url("../../assets/crew/background-crew-desktop.jpg");
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+   
+
+    main { 
+        
+        .meet  {
+            margin-top: 172px;
+            margin-left: 166.5px;
+            min-width: 305px;
+            height: 34px;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 4.72px;
+    
+            span {
+                width: 30px;
+                margin-right: 20px;
+            }
+        }
+        div div .commander {
+        margin-top: 50px;
+        margin-left: 160px;
+         
+        div h3 {
+            text-transform: uppercase;
+            letter-spacing: 2.7px;
+            color: #D0D6F9;
+            height: 19px;
+        }
+        div h1 {
+        text-transform: uppercase;
+        font-size: 3rem;
+        margin-top: 30px;
+        }
+        div p {
+            color: #D0D6F9;
+            line-height: 32px;
+            width: 400px;
+            font-size: 1.2rem;
+            margin-top: 30px;
+        }
+    }
+
+        div div.selection {
+            width: 132px;
+            height: 15px;
+            margin-left: 160px;
+            margin-top: 100px;
+
+            .round-selection {
+                border-radius: 50%;
+                width: 15px;
+                height: 15px;
+                background-color: #979797;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #FFFFFF;
+                }
+            }
+
+            .one {
+                background-color: #FFFFFF;
+            }
+            .not-one {
+                background-color: #979797;
+            }
+        
+        }
+        div.image .crew-img {
+            width: 80%;
+            height: 512px;
+            margin-top: 79px;
+            margin-right: 200px
+        }
+       }
+}
+@media screen and (max-width:1100px) {
+    
+.crew {
+    background-image: url("../../assets/crew/background-crew-tablet.jpg");
+    background-repeat: no-repeat;
+    height: 1400px;
+    overflow-y: hidden;
+
+    main { 
+        
+       .meet  {
+        margin-top: 150px;
+        margin-left: 66.5px;
+        margin-bottom: 100px;
+            span {
+                width: 30px;
+            }
+        }
+        div div .commander {
+        margin-left: 0px;
+        text-align: center;
+        
+        div h3 {
+            font-size: 1.5rem;
+        }
+        div p {
+            min-width: 500px;
+            font-size: 1.2rem;
+            margin: auto;
+            margin-top: 50px;
+        }
+    }
+
+        div div.selection {
+            flex-direction: row;
+            margin-left: 0px;
+            margin: auto;
+            margin-top: 100px;
+        }
+        div.image .crew-img {
+            display: inline-block;
+            width: 100%;
+            margin: auto;
+            margin-top: 79px;
+        }
+       }
+    }    
+}
+@media screen and (max-width:720px) {
+    .crew {
+        background-image: url("../../assets/crew/background-crew-mobile.jpg");
+        background-repeat: no-repeat;
+       text-align: center;
+    
+        main { 
+            
+            .meet  {
+               min-width: 0px;
+               margin-bottom: 100px;
+               margin: auto;
+               margin-top: 100px;
+                span {
+                    width: 30px;
+                }
+            }
+            
+            .flex {
+                flex-direction: column-reverse;
+            }
+            div div .commander {
+            margin-left: 0px;
+            
+            div p {
+                min-width: 100px;
+                font-size: 1.3rem;
+                margin: auto;
+                margin-top: 50px;
+            }
+        }
+    
+            div div.selection {
+                flex-direction: row;
+                margin-left: 0px;
+                margin: auto;
+                margin-top: 100px;
+            }
+           }
+        }   
+}
+@media screen and (max-width:520px) {
+    .crew {
+    
+        main { 
+            div div .commander {
+            
+            div h1 {
+            font-size: 2rem;
+            }
+            div p {
+                min-width: 200px;
+            }
+        }
+           }
+        }   
+}
+@media screen and (max-width:440px) {
+    .crew {
+            height: 1460px;
+        main { 
+            
+            .meet  {
+                font-size: 1.2rem;
+                letter-spacing: 1px;
+                 span {
+                    margin-right: 10px;
+                }
+            }
+            div div .commander {
+            
+            div h1 {
+            font-size: 2rem;
+            }
+            div p {
+                max-width: 300px;
+            }
+        }
+           }
+        }   
+}
+
+@media screen and (max-width:300px) {
+    .crew {
+    
+        main { 
+            
+            .meet  {
+               font-size: 1rem;
+               letter-spacing: 1px;
+                span {
+                    margin-right: 0px;
+                }
+            }
+        }
+    }
+}

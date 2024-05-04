@@ -148,7 +148,8 @@
     }
 }
 
-@media screen and (max-width: 430px) {
+
+@media screen and (min-width: 400px)  and (min-height: 915px) {
     .planet {
     
         div hr {
@@ -158,18 +159,18 @@
         
     }
 }
-
-@media screen and (max-width: 420px) {
+@media screen and (min-width: 390px)  and (max-height: 844px) {
     .planet {
     
         div hr {
             position: absolute;
-            top: 88%;
+            top: 94%;
         }
         
     }
 }
-@media screen and (max-width: 415px) {
+
+@media screen and (width: 414px)  and (height: 896px) {
     .planet {
     
         div hr {
@@ -179,27 +180,7 @@
         
     }
 }
-@media screen and (max-width: 412px) {
-    .planet {
-    
-        div hr {
-            position: absolute;
-            top: 87%;
-        }
-        
-    }
-}
-@media screen and (max-width: 390px) {
-    .planet {
-    
-        div hr {
-            position: absolute;
-            top: 95%;
-        }
-        
-    }
-}
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 375px)  and (max-height: 667px) {
     .planet {
     
         div hr {
@@ -209,17 +190,8 @@
         
     }
 }
-@media screen and (max-width: 400px) {
-    @media screen and (max-width: 360px) {
-    .planet {
-    
-        div hr {
-            position: absolute;
-            top: 107%;
-        }
-        
-    }
-}
+
+@media screen and (max-width: 430px) and (min-height: 700px) {
     .planet {
     
         div hr {

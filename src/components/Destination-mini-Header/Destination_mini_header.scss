@@ -209,7 +209,17 @@
         
     }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 400px) {
+    @media screen and (max-width: 360px) {
+    .planet {
+    
+        div hr {
+            position: absolute;
+            top: 107%;
+        }
+        
+    }
+}
     .planet {
     
         div hr {

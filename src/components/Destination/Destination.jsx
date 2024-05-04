@@ -15,6 +15,10 @@ const destinationsData = data.destinations
 
 
 const Destination = () => {
+    const [moonBorder, setMoonBorder] = useState(true)
+    const [marsBorder, setMarsBorder] = useState(false)
+    const [europaBorder, setEuropaBorder] = useState(false)
+    const [titanBorder, setTitanBotrder] = useState(false)
     const [image, setImage] = useState(Moon)
     const [name, setName] = useState(destinationsData[0].name)
     const [description, setDescription] = useState(destinationsData[0].description)
@@ -36,6 +40,8 @@ const Destination = () => {
         setDescription(destinationsData[1].description);
         setTravel(destinationsData[1].travel);
         setDistance(destinationsData[1].distance);
+        setMarsBorder(true);
+        setMoonBorder(false);
      }
     
      const europa = () => {
@@ -54,17 +60,20 @@ const Destination = () => {
      }
     const moonMouseOver = () => {
         const moon = document.querySelector(".hr-moon");
-       moon.style.display = "inline-block";
+       moon.classList.add("display");
+       moon.classList.remove("no-display");
     }
     
     const moonMouseLeave = () => {
         const moon = document.querySelector(".hr-moon");
-        moon.style.display = "none";
+        moon.classList.remove("display");
+        moon.classList.add("no-display");
      }
     
      const marsMouseOver = () => {
         const mars = document.querySelector(".hr-mars");
-       mars.style.display = "inline-block";
+        mars.classList.remove("display");
+        mars.classList.add("no-display");
     }
     
     const marsMouseLeave = () => {
@@ -105,19 +114,19 @@ const Destination = () => {
                         <div className="flex planet">
                             <div onClick={moon} className="column">
                                 <p className="moon" onMouseOver={moonMouseOver} onMouseLeave={moonMouseLeave}>Moon</p>
-                                <hr className="hr-moon"></hr>
+                                <hr className="hr-moon display"></hr>
                             </div>
                             <div onClick={mars}>
                                 <p className="mars" onMouseOver={marsMouseOver} onMouseLeave={marsMouseLeave}>Mars</p>
-                                <hr className="hr-mars"></hr>
+                                <hr className="hr-mars display" /*id="mars-display"*/></hr>
                             </div>
                             <div onClick={europa}>
                                 <p className="europa" onMouseOver={europaMouseOver} onMouseLeave={europaMouseLeave}>Europa</p>
-                                <hr className="hr-europa"></hr>
+                                <hr className="hr-europa display"></hr>
                             </div>
                             <div onClick={titan}>
                                 <p className="titan" onMouseOver={titanMouseOver} onMouseLeave={titanMouseLeave}>Titan</p>
-                                <hr className="hr-titan"></hr>
+                                <hr className="hr-titan display"></hr>
                             </div>
                         </div>
                         <div className="specific-planet">

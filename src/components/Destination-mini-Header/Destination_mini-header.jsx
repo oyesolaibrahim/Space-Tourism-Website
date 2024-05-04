@@ -9,10 +9,6 @@ import "./Destination_mini_header.scss";
 
 
 const Destination_Header = ({destinationsData}) => {
-    const [homeBorderBottom, setHomeBorderBottom] = useState(false);
-    const [destinationBorderBottom, setDestinationBorderBottom] = useState(true)
-    const [crewBorderBottom, setCrewBorderBottom] = useState(false);
-    const [technologyBorderBottom, setTechnologyBorderBottom] = useState(false)
     const [image, setImage] = useState(Moon)
     const [name, setName] = useState(destinationsData[0].name)
     const [description, setDescription] = useState(destinationsData[0].description)
@@ -94,15 +90,15 @@ const marsMouseLeave = () => {
                                 <p className="moon" onMouseOver={moonMouseOver} onMouseLeave={moonMouseLeave}>Moon</p>
                                 <hr className="hr-moon"></hr>
                             </div>
-                            <div onClick={mars}>
+                            <div onClick={mars} className="column">
                                 <p className="mars" onMouseOver={marsMouseOver} onMouseLeave={marsMouseLeave}>Mars</p>
                                 <hr className="hr-mars"></hr>
                             </div>
-                            <div onClick={europa}>
+                            <div onClick={europa} className="column">
                                 <p className="europa" onMouseOver={europaMouseOver} onMouseLeave={europaMouseLeave}>Europa</p>
                                 <hr className="hr-europa"></hr>
                             </div>
-                            <div onClick={titan}>
+                            <div onClick={titan} className="column">
                                 <p className="titan" onMouseOver={titanMouseOver} onMouseLeave={titanMouseLeave}>Titan</p>
                                 <hr className="hr-titan"></hr>
                             </div>

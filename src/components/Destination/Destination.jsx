@@ -139,15 +139,15 @@ const Destination = () => {
                                 <p className="moon" onMouseOver={moonMouseOver} onMouseLeave={moonMouseLeave}>Moon</p>
                                 <hr className="hr-moon no-display" id={moonBorder && "moon-display"}></hr>
                             </div>
-                            <div onClick={mars}>
+                            <div onClick={mars} className="column">
                                 <p className="mars" onMouseOver={marsMouseOver} onMouseLeave={marsMouseLeave}>Mars</p>
                                 <hr className="hr-mars no-display" id={marsBorder && "mars-display"}></hr>
                             </div>
-                            <div onClick={europa}>
+                            <div onClick={europa} className="column">
                                 <p className="europa" onMouseOver={europaMouseOver} onMouseLeave={europaMouseLeave}>Europa</p>
                                 <hr className="hr-europa no-display" id={europaBorder && "europa-display"}></hr>
                             </div>
-                            <div onClick={titan}>
+                            <div onClick={titan} className="column">
                                 <p className="titan" onMouseOver={titanMouseOver} onMouseLeave={titanMouseLeave}>Titan</p>
                                 <hr className="hr-titan no-display" id={titanBorder && "titan-display"}></hr>
                             </div>

@@ -110,6 +110,7 @@ width: 140px;
 .p-home { 
     margin-left: 80px;
     }
+
     .p-home,.p-destination, .p-crew, .p-technology {
     letter-spacing: 2.36px;
         span {
@@ -137,6 +138,9 @@ width: 140px;
     
     }
  }   
+ .hr-home, .hr-destination, .hr-crew, .hr-technology {
+ display: none;
+ }
 }
 
 @media screen and (max-width:950px) {

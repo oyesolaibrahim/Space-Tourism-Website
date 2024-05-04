@@ -22,7 +22,6 @@
     }
     div hr.hr-moon {
         width: 41px;
-        display: inline-block;
     }
      
     div p.mars {
@@ -69,9 +68,154 @@
         height: 34px;
     
         div hr {
-            display: none;
             position: absolute;
-            top: -64%;
+            top: 152%;
         }
+        
+    div hr.hr-moon {
+        width: 55px;
+    }
+     
+    div hr.hr-mars {
+        width: 50px;;
+        margin-left: 0px;
+    } 
+    div hr.hr-europa {
+        width: 65px;
+        margin-left: -10px;
+    } 
+    div hr.hr-titan {
+        width: 53px;
+        margin-left: 0px;
+    }
+    }
+}
+
+@media screen and (max-width:600px) {
+    .planet {
+        width: 285.5px;
+        height: 34px;
+    
+        div hr {
+            position: absolute;
+            top: 127%;
+        }
+        
+        div hr.hr-moon {
+            width: 75px;
+            margin-left: 30px;
+        }
+         
+        div hr.hr-mars {
+            width: 60px;
+            margin-left: -20px;
+        } 
+        div hr.hr-europa {
+            width: 85px;
+            margin-left: -30px;
+        } 
+        div hr.hr-titan {
+            width: 63px;
+            margin-left: -20px;
+        }
+    }
+}
+@media screen and (max-width: 545px) {
+    .planet {
+    
+        div hr {
+            position: absolute;
+            top: 127%;
+        }
+        
+        div hr.hr-moon {
+            width: 65px;
+            margin-left: 10px;
+        }
+         
+        div hr.hr-mars {
+            width: 60px;
+            margin-left: -20px;
+        } 
+        div hr.hr-europa {
+            width: 70px;
+            margin-left: -30px;
+        } 
+        div hr.hr-titan {
+            width: 55px;
+            margin-left: -20px;
+        }
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .planet {
+    
+        div hr {
+            position: absolute;
+            top: 87%;
+        }
+        
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .planet {
+    
+        div hr {
+            position: absolute;
+            top: 88%;
+        }
+        
+    }
+}
+@media screen and (max-width: 415px) {
+    .planet {
+    
+        div hr {
+            position: absolute;
+            top: 89%;
+        }
+        
+    }
+}
+@media screen and (max-width: 412px) {
+    .planet {
+    
+        div hr {
+            position: absolute;
+            top: 87%;
+        }
+        
+    }
+}
+@media screen and (max-width: 390px) {
+    .planet {
+    
+        div hr {
+            position: absolute;
+            top: 95%;
+        }
+        
+    }
+}
+@media screen and (max-width: 375px) {
+    .planet {
+    
+        div hr {
+            position: absolute;
+            top: 119%;
+        }
+        
+    }
+}
+@media screen and (max-width: 360px) {
+    .planet {
+    
+        div hr {
+            position: absolute;
+            top: 107%;
+        }
+        
     }
 }

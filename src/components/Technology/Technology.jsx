@@ -15,6 +15,10 @@ const technologyData = data.technology
 
 
 const Technology = () => {
+    const [homeBorderBottom, setHomeBorderBottom] = useState(false);
+    const [destinationBorderBottom, setDestinationBorderBottom] = useState(false)
+    const [crewBorderBottom, setCrewBorderBottom] = useState(false);
+    const [technologyBorderBottom, setTechnologyBorderBottom] = useState(true)
 
     const [image, setImage] = useState(Vehicle)
     const [image2, setImage2] = useState(Vehicle2)

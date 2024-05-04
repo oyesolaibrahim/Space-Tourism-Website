@@ -15,12 +15,14 @@ const crewsData = data.crew
 
 
 const Crew = () => {
-
-const [crewBorderBottom, setCrewBorderBottom] = useState(true)
-const [image, setImage] = useState(Douglas)
-const [name, setName] = useState(crewsData[0].name)
-const [role, setRole] = useState(crewsData[0].role)
-const [bio, setBio] = useState(crewsData[0].bio)
+    const [homeBorderBottom, setHomeBorderBottom] = useState(false);
+    const [destinationBorderBottom, setDestinationBorderBottom] = useState(false)
+    const [crewBorderBottom, setCrewBorderBottom] = useState(true);
+    const [technologyBorderBottom, setTechnologyBorderBottom] = useState(false)
+    const [image, setImage] = useState(Douglas)
+    const [name, setName] = useState(crewsData[0].name)
+    const [role, setRole] = useState(crewsData[0].role)
+    const [bio, setBio] = useState(crewsData[0].bio)
 
 const douglas = (e) => {
     setName(crewsData[0].name);

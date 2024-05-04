@@ -9,11 +9,15 @@ import "./Destination_mini_header.scss";
 
 
 const Destination_Header = ({destinationsData}) => {
-const [image, setImage] = useState(Moon)
-const [name, setName] = useState(destinationsData[0].name)
-const [description, setDescription] = useState(destinationsData[0].description)
-const [travel, setTravel] = useState(destinationsData[0].travel)
-const [distance, setDistance] = useState(destinationsData[0].distance)
+    const [homeBorderBottom, setHomeBorderBottom] = useState(false);
+    const [destinationBorderBottom, setDestinationBorderBottom] = useState(true)
+    const [crewBorderBottom, setCrewBorderBottom] = useState(false);
+    const [technologyBorderBottom, setTechnologyBorderBottom] = useState(false)
+    const [image, setImage] = useState(Moon)
+    const [name, setName] = useState(destinationsData[0].name)
+    const [description, setDescription] = useState(destinationsData[0].description)
+    const [travel, setTravel] = useState(destinationsData[0].travel)
+    const [distance, setDistance] = useState(destinationsData[0].distance)
 
   
 const moon = () => {

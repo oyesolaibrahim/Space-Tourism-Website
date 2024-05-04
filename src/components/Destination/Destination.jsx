@@ -15,10 +15,14 @@ const destinationsData = data.destinations
 
 
 const Destination = () => {
+    const [homeBorderBottom, setHomeBorderBottom] = useState(false);
+    const [destinationBorderBottom, setDestinationBorderBottom] = useState(true)
+    const [crewBorderBottom, setCrewBorderBottom] = useState(false);
+    const [technologyBorderBottom, setTechnologyBorderBottom] = useState(false)
     const [moonBorder, setMoonBorder] = useState(true)
     const [marsBorder, setMarsBorder] = useState(false)
     const [europaBorder, setEuropaBorder] = useState(false)
-    const [titanBorder, setTitanBotrder] = useState(false)
+    const [titanBorder, setTitanBorder] = useState(false)
     const [image, setImage] = useState(Moon)
     const [name, setName] = useState(destinationsData[0].name)
     const [description, setDescription] = useState(destinationsData[0].description)
@@ -32,6 +36,10 @@ const Destination = () => {
         setDescription(destinationsData[0].description);
         setTravel(destinationsData[0].travel);
         setDistance(destinationsData[0].distance);
+        setMarsBorder(false);
+        setEuropaBorder(false);
+        setTitanBorder(false);
+        setMoonBorder(true);
      }
     
      const mars = () => {
@@ -42,6 +50,8 @@ const Destination = () => {
         setDistance(destinationsData[1].distance);
         setMarsBorder(true);
         setMoonBorder(false);
+        setEuropaBorder(false);
+        setTitanBorder(false);
      }
     
      const europa = () => {
@@ -50,6 +60,10 @@ const Destination = () => {
         setDescription(destinationsData[2].description);
         setTravel(destinationsData[2].travel);
         setDistance(destinationsData[2].distance);
+        setEuropaBorder(true);
+        setMarsBorder(false);
+        setMoonBorder(false);
+        setTitanBorder(false);
      }
      const titan = () => {
         setImage(Titan);
@@ -57,6 +71,10 @@ const Destination = () => {
         setDescription(destinationsData[3].description);
         setTravel(destinationsData[3].travel);
         setDistance(destinationsData[3].distance);
+        setTitanBorder(true);
+        setMoonBorder(false);
+        setMarsBorder(false);
+        setEuropaBorder(false);
      }
     const moonMouseOver = () => {
         const moon = document.querySelector(".hr-moon");
@@ -72,31 +90,36 @@ const Destination = () => {
     
      const marsMouseOver = () => {
         const mars = document.querySelector(".hr-mars");
-        mars.classList.remove("display");
-        mars.classList.add("no-display");
+        mars.classList.add("display");
+        mars.classList.remove("no-display");
     }
     
     const marsMouseLeave = () => {
         const mars = document.querySelector(".hr-mars");
-        mars.style.display = "none";
+        mars.classList.remove("display");
+        mars.classList.add("no-display");
      }
      const europaMouseOver = () => {
          const europa = document.querySelector(".hr-europa");
-        europa.style.display = "inline-block";
+         europa.classList.add("display");
+         europa.classList.remove("no-display");
      }
      
      const europaMouseLeave = () => {
          const europa = document.querySelector(".hr-europa");
-         europa.style.display = "none";
+         europa.classList.remove("display");
+         europa.classList.add("no-display");
       }
       const titanMouseOver = () => {
           const titan = document.querySelector(".hr-titan");
-         titan.style.display = "inline-block";
+          titan.classList.add("display");
+          titan.classList.remove("no-display");
       }
       
       const titanMouseLeave = () => {
           const titan = document.querySelector(".hr-titan");
-          titan.style.display = "none";
+          titan.classList.remove("display");
+          titan.classList.add("no-display");
        }
     
         
@@ -114,19 +137,19 @@ const Destination = () => {
                         <div className="flex planet">
                             <div onClick={moon} className="column">
                                 <p className="moon" onMouseOver={moonMouseOver} onMouseLeave={moonMouseLeave}>Moon</p>
-                                <hr className="hr-moon display"></hr>
+                                <hr className="hr-moon no-display" id={moonBorder && "moon-display"}></hr>
                             </div>
                             <div onClick={mars}>
                                 <p className="mars" onMouseOver={marsMouseOver} onMouseLeave={marsMouseLeave}>Mars</p>
-                                <hr className="hr-mars display" /*id="mars-display"*/></hr>
+                                <hr className="hr-mars no-display" id={marsBorder && "mars-display"}></hr>
                             </div>
                             <div onClick={europa}>
                                 <p className="europa" onMouseOver={europaMouseOver} onMouseLeave={europaMouseLeave}>Europa</p>
-                                <hr className="hr-europa display"></hr>
+                                <hr className="hr-europa no-display" id={europaBorder && "europa-display"}></hr>
                             </div>
                             <div onClick={titan}>
                                 <p className="titan" onMouseOver={titanMouseOver} onMouseLeave={titanMouseLeave}>Titan</p>
-                                <hr className="hr-titan display"></hr>
+                                <hr className="hr-titan no-display" id={titanBorder && "titan-display"}></hr>
                             </div>
                         </div>
                         <div className="specific-planet">

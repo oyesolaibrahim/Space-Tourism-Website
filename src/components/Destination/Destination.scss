@@ -9,7 +9,7 @@
     display: inline-block;
 }
 #mars-display {
-display: inline-block;
+    display: inline-block;
 }
 #europa-display {
     display: inline-block;
@@ -142,7 +142,6 @@ display: inline-block;
     
            }
         .planet-hr {
-            width: px;
             margin: 50px auto;
         }
         .distance  {
@@ -151,7 +150,7 @@ display: inline-block;
                 text-transform: uppercase;
             }
             h3 {
-                font-size: 40px;
+                font-size: 37px;
                 text-transform: uppercase;
             }
         }
@@ -161,7 +160,7 @@ display: inline-block;
                 text-transform: uppercase;
             }
             h3 {
-                font-size: 40px;
+                font-size: 37px;
                 text-transform: uppercase;
             }
         } 
@@ -253,12 +252,24 @@ display: inline-block;
                     }
                 }
                 .p-description {
-                    margin-left: auto;
+                    margin-left: 0px;
+                    margin: auto;
                    .planet-description {
                     max-width: 300px;
                     margin: auto;
                 }
                 }
+            }
+           }
+           .desination-footer {
+            margin:auto;
+            .planet-hr {
+                width: 300px;
+                margin-left: 0px;
+               }
+            
+               .distance-time {
+                margin-top: 100px;
             }
            }
     }
@@ -288,18 +299,7 @@ display: inline-block;
             }
         }
 
-       }
-       .desination-footer {
-        margin:auto;
-    .planet-hr {
-        width: 300px;
-        margin-left: 0px;
-           }
-        
-           .distance-time {
-            margin-top: 100px;
-        }
-       }   
+       } 
         }
 }
 

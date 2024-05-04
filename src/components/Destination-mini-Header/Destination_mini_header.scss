@@ -118,12 +118,13 @@
             margin-left: 10px;
         }
          
-        div hr.hr-mars {
-            margin-left: -0px;
+        div.column hr.hr-mars {
+            width: 50px;
+            margin-left: 10px;
         } 
-        div hr.hr-europa {
+        div.column hr.hr-europa {
             width: 70px;
-            margin-left: -20px;
+            margin-left: 10px;
         } 
         div hr.hr-titan {
             width: 55px;

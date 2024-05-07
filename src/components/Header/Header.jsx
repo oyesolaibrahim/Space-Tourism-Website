@@ -91,7 +91,6 @@ const homeMouseOver = () => {
      }
      const homeClicked = () => {
         changeNavBorderBottom({
-            
             homeBorderBottom: true,
             destinationBorderBottom: false,
             crewBorderBottom: false,

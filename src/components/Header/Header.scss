@@ -23,71 +23,61 @@ header {
         margin-top: 70px;
         font-size: 12px;
         text-transform: uppercase;
-       /* padding-left: 50px;
-*/
+       
 
-.p-home { 
-width: 80px;
-margin-left: 80px;
-}
-.p-home,.p-destination, .p-crew, .p-technology {
-height: 19px;
-letter-spacing: 2.7px;
-position: relative;
-}
-.hr-home {
-width: 70px;
-margin-left: 80px;
-}
- .hr-home, .hr-destination, .hr-crew, .hr-technology {
-position: absolute;
-bottom:0px;
-border: 3px solid#D0D6F9; 
+            .p-home { 
+            width: 80px;
+            margin-left: 80px;
+            }
+            .p-home,.p-destination, .p-crew, .p-technology {
+            height: 19px;
+            display: inline;
+            letter-spacing: 2.7px;
+            position: relative;
+            }
+            .hr-home {
+            width: 80px;
+            margin-left: 80px;
+            }
+             .hr-home, .hr-destination, .hr-crew, .hr-technology {
+            position: absolute;
+            bottom:0px;
+            border: 3px solid#D0D6F9; 
             
-}
-.no-display {
-    display: none;
-}
-.display {
-    display: block;
-}       
-.home-display, #destination-display, #crew-display, #technology-display {
-    display: block;
-    border: 3px solid white
-}       
-.p-destination {
-width: 130px;
-}
+            }
+            .no-display {
+                display: none;
+            }
+            .display {
+                display: block;
+            }       
+            .home-display, #destination-display, #crew-display, #technology-display {
+                display: block;
+                border: 3px solid white
+            }       
+            .p-destination, .hr-destination {
+            width: 130px;
+            }
+            .p-crew, .hr-crew {
+            width: 75px;
+            }
+            .p-technology, .hr-technology {
+            width: 140px;
+            margin-right: 150px;
+            }
+     }
+            .menu p {
+                cursor: pointer;
+            }
 
-.hr-destination {
-    width: 130px;
-}
-.p-crew {
-width: 75px;
-}
-.hr-crew {
-width: 75px;
-}
-.p-technology {
-width: 140px;
-margin-right: 150px;
-}
-.hr-technology {
-width: 140px;
-}
-    }
-    .menu p {
-        cursor: pointer;
-    }
-    
-    i.fa {
-        font-size: 2rem;
-        margin-right: 50px;
-        cursor: pointer;
-        display: none;
-        color: #D0D6F9;
-    }
-}
+            i.fa {
+                font-size: 2rem;
+                margin-right: 50px;
+                cursor: pointer;
+                display: none;
+                color: #D0D6F9;
+            }
+        }
 
 @media screen and (max-width:1100px) {
  header {
@@ -100,7 +90,17 @@ div.logo {
 }
      .menu {
         margin-top: 0px;
-         
+        max-width: 600px;
+
+            .hr-destination, .hr-technology {
+                width: 110px;
+            }
+            .hr-crew, .hr-home {
+            width: 55px;
+            }
+        span {
+            display: none;
+         }
         
     }
  }  
@@ -149,7 +149,7 @@ div.logo {
            z-index: 88;             
 
             span {
-                display: inline-block;
+                display: inline;
             }
             
                    

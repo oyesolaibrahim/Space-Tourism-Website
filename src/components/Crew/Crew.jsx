@@ -1,5 +1,5 @@
 import "./Crew.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Douglas from "../../assets/crew/image-douglas-hurley.png"
 import Mark from "../../assets/crew/image-mark-shuttleworth.png"
 import Victor from "../../assets/crew/image-victor-glover.png"
@@ -7,6 +7,7 @@ import Flight from "../../assets/crew/image-anousheh-ansari.png"
 import Header from "../Header/Header";
 //import Destination_Header from "../Destination-mini-Header/Destination_mini-header";
 import data from "../../data.json"
+import { useNavBorderBottom } from "../HederContext";
 
 
 
@@ -15,15 +16,18 @@ const crewsData = data.crew
 
 
 const Crew = () => {
-    const [homeBorderBottom, setHomeBorderBottom] = useState(false);
-    const [destinationBorderBottom, setDestinationBorderBottom] = useState(false)
-    const [crewBorderBottom, setCrewBorderBottom] = useState(true);
-    const [technologyBorderBottom, setTechnologyBorderBottom] = useState(false)
     const [image, setImage] = useState(Douglas)
     const [name, setName] = useState(crewsData[0].name)
     const [role, setRole] = useState(crewsData[0].role)
     const [bio, setBio] = useState(crewsData[0].bio)
-
+    const { navBorderBottom, changeNavBorderBottom } = useNavBorderBottom();
+      
+    useEffect(() => {
+        changeNavBorderBottom({
+            crewBorderBottom: true,
+        })
+    }, [])
+  
 const douglas = (e) => {
     setName(crewsData[0].name);
     setRole(crewsData[0].role);

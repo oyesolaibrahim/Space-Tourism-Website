@@ -39,35 +39,28 @@ position: relative;
 width: 70px;
 margin-left: 80px;
 }
-.hr-home, .hr-destination, .hr-crew, .hr-technology {
+ .hr-home, .hr-destination, .hr-crew, .hr-technology {
 position: absolute;
 bottom:0px;
-border: 3px solid white            
+border: 3px solid#D0D6F9; 
+            
 }
 .no-display {
     display: none;
 }
 .display {
-    display: inline-block;            
-}
-#home-display {
-    display: inline-block;
+    display: block;
 }       
-#destination-display {
-    display: inline-block;
-}      
-#crew-display {
-    display: inline-block;
-}      
-#technology-display {
-    display: inline-block;
+.home-display, #destination-display, #crew-display, #technology-display {
+    display: block;
+    border: 3px solid white
 }       
 .p-destination {
 width: 130px;
 }
 
 .hr-destination {
-width: 130px;
+    width: 130px;
 }
 .p-crew {
 width: 75px;
@@ -101,46 +94,16 @@ width: 140px;
     .horizontal-line {
         display: none;
     }
-    .menu {
-        width: 600px;
-    }
-    div.logo, .menu {
+ 
+div.logo {
+    margin-top: 0px;
+}
+     .menu {
         margin-top: 0px;
+         
         
-.p-home { 
-    margin-left: 80px;
     }
-
-    .p-home,.p-destination, .p-crew, .p-technology {
-    letter-spacing: 2.36px;
-        span {
-            display: none;
-        }
-    }
-    .hr-home {
-    margin-left: 5px;
-    }
-    
-    .hr-destination {
-    margin-right: 100px;
-    }
-    
-    .hr-crew {
-    margin-left: 0px;
-    }
-    
-    .hr-technology {
-    margin-right: 10000px;
-    }
-    .p-technology {
-    margin-right: 0px;
-    }
-    
-    }
- }   
- .hr-home, .hr-destination, .hr-crew, .hr-technology {
- display: none;
- }
+ }  
 }
 
 @media screen and (max-width:950px) {
@@ -188,7 +151,9 @@ width: 140px;
             span {
                 display: inline-block;
             }
-            .hr-crew, .hr-destination, .hr-home, .hr-technology {
+            
+                   
+            .home-display, #destination-display, #crew-display, #technology-display {
                 display: none;
             }
           

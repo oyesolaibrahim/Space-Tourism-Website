@@ -1,5 +1,5 @@
 import "./Destination.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "../Header/Header";
 import Destination_Header from "../Destination-mini-Header/Destination_mini-header";
 import data from "../../data.json"
@@ -7,6 +7,7 @@ import Moon from "../../assets/destination/image-moon.png"
 import Mars from "../../assets/destination/image-mars.png"
 import Europa from "../../assets/destination/image-europa.png"
 import Titan from "../../assets/destination/image-titan.png"
+import { useNavBorderBottom } from "../HederContext";
 
 
 
@@ -28,7 +29,14 @@ const Destination = () => {
     const [description, setDescription] = useState(destinationsData[0].description)
     const [travel, setTravel] = useState(destinationsData[0].travel)
     const [distance, setDistance] = useState(destinationsData[0].distance)
-    
+    const { navBorderBottom, changeNavBorderBottom } = useNavBorderBottom();
+      
+    useEffect(() => {
+        changeNavBorderBottom({
+            destinationBorderBottom: true,
+        })
+    }, [])
+  
       
     const moon = () => {
         setImage(Moon);

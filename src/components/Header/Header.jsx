@@ -2,15 +2,13 @@ import logo from "../../assets/shared/logo.svg"
 import { Link } from 'react-router-dom';
 import "./Header.scss";
 import { useState } from "react";
+import { useNavBorderBottom } from "../HederContext";
 
     
 const Header = () => {
 
+const { navBorderBottom, changeNavBorderBottom } = useNavBorderBottom();
 
-const [homeBorderBottom, setHomeBorderBottom] = useState(true);
-const [destinationBorderBottom, setDestinationBorderBottom] = useState(false)
-const [crewBorderBottom, setCrewBorderBottom] = useState(false);
-const [technologyBorderBottom, setTechnologyBorderBottom] = useState(false)
 const [menuOpen, setMenuOpen] = useState(false);
 const [barClose, setBarClose] = useState(false);
 const [timesOpen, setTimesOpen] = useState(false);
@@ -28,12 +26,15 @@ const timesClick = () => {
 
 const homeMouseOver = () => {
     const home = document.querySelector(".hr-home");
- }
+    home.classList.add ("display");
+    home.classList.remove ("no-display");
+}
  
  const homeMouseLeave = () => {
      const home = document.querySelector(".hr-home");
-    //setHomeBorderBottom(true);
-    }
+     home.classList.remove ("display");
+     home.classList.add ("no-display");
+  }
   const destinationMouseOver = () => {
      const destination = document.querySelector(".hr-destination");
      
@@ -72,29 +73,38 @@ const homeMouseOver = () => {
      }
     
     const crewClicked = () => {
-        setCrewBorderBottom(true);
-        setHomeBorderBottom(false);
-        setDestinationBorderBottom(false);
-        setTechnologyBorderBottom(false);
+        changeNavBorderBottom({
+
+            homeBorderBottom: false,
+            destinationBorderBottom: false,
+            crewBorderBottom: true,
+            technologyBorderBottom: false        })
     }
     
     const technologyClicked = () => {
-        setCrewBorderBottom(false);
-        setHomeBorderBottom(false);
-        setDestinationBorderBottom(false);
-        setTechnologyBorderBottom(true);
+        changeNavBorderBottom({
+            homeBorderBottom: false,
+            destinationBorderBottom: false,
+            crewBorderBottom: false,
+            technologyBorderBottom: true
+        })
      }
      const homeClicked = () => {
-         setCrewBorderBottom(false);
-         setHomeBorderBottom(true);
-         setDestinationBorderBottom(false);
-         setTechnologyBorderBottom(false);
+        changeNavBorderBottom({
+            
+            homeBorderBottom: true,
+            destinationBorderBottom: false,
+            crewBorderBottom: false,
+            technologyBorderBottom: false
+        })
       }
       const destinationClicked = () => {
-          setCrewBorderBottom(false);
-          setHomeBorderBottom(false);
-          setDestinationBorderBottom(true);
-          setTechnologyBorderBottom(false);
+        changeNavBorderBottom({
+            homeBorderBottom: false,
+            destinationBorderBottom: true,
+            crewBorderBottom: false,
+            technologyBorderBottom: false
+        })
        }
     return (
         
@@ -110,25 +120,25 @@ const homeMouseOver = () => {
         <Link style={{color: "white", textDecoration: "none"}} to="/">
             <div>
                 <p className="p-home" onMouseOver={homeMouseOver} onMouseLeave={homeMouseLeave} onClick={homeClicked}><span>00</span> Home</p>
-                <hr className="hr-home" id={homeBorderBottom && "home-display"}></hr>
+                <hr className={`hr-home ${navBorderBottom.homeBorderBottom ? "home-display" : "no-display"}`}></hr>
             </div>
         </Link>
         <Link style={{color: "white", textDecoration: "none"}} to="/destination">
             <div>
                 <p className="p-destination" onMouseOver={destinationMouseOver} onMouseLeave={destinationMouseLeave} onClick={destinationClicked}><span>01</span> Destination</p>
-                <hr className="hr-destination no-display" id={destinationBorderBottom && "destination-display"}></hr>
+                <hr className="hr-destination no-display" id={navBorderBottom.destinationBorderBottom && "destination-display"}></hr>
             </div>
         </Link>
         <Link style={{color: "white", textDecoration: "none"}} to="/crew">
             <div>
                 <p className="p-crew" onMouseOver={crewMouseOver} onMouseLeave={crewMouseLeave} onClick={crewClicked}><span>02</span> Crew</p>
-                <hr className= "hr-crew no-display" id={crewBorderBottom && "crew-display"}></hr>
+                <hr className= "hr-crew no-display" id={navBorderBottom.crewBorderBottom && "crew-display"}></hr>
             </div>
         </Link>
         <Link style={{color: "white", textDecoration: "none"}} to="/technology">
             <div>
                 <p className="p-technology" onClick={technologyClicked} onMouseOver={technologyMouseOver} onMouseLeave={technologyMouseLeave}><span>03</span> Technology</p>
-                <hr className="hr-technology no-display" id={technologyBorderBottom && "technology-display"}></hr>
+                <hr className="hr-technology no-display" id={navBorderBottom.technologyBorderBottom && "technology-display"}></hr>
             </div>
          </Link>
         </div>

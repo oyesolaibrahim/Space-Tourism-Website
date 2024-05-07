@@ -1,6 +1,6 @@
 import Header from "../Header/Header";
 import "./Technology.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Vehicle from "../../assets/technology/image-launch-vehicle-portrait.jpg"
 import Vehicle2 from "../../assets/technology/image-launch-vehicle-landscape.jpg"
 import Spaceport from "../../assets/technology/image-spaceport-portrait.jpg"
@@ -8,6 +8,7 @@ import Spaceport2 from "../../assets/technology/image-spaceport-landscape.jpg"
 import Capsule from "../../assets/technology/image-space-capsule-portrait.jpg"
 import Capsule2 from "../../assets/technology/image-space-capsule-landscape.jpg"
 import data from "../../data.json"
+import { useNavBorderBottom } from "../HederContext";
 
 
 
@@ -15,16 +16,18 @@ const technologyData = data.technology
 
 
 const Technology = () => {
-    const [homeBorderBottom, setHomeBorderBottom] = useState(false);
-    const [destinationBorderBottom, setDestinationBorderBottom] = useState(false)
-    const [crewBorderBottom, setCrewBorderBottom] = useState(false);
-    const [technologyBorderBottom, setTechnologyBorderBottom] = useState(true)
-
     const [image, setImage] = useState(Vehicle)
     const [image2, setImage2] = useState(Vehicle2)
     const [name, setName] = useState(technologyData[0].name)
     const [description, setDescription] = useState(technologyData[0].description)
-    
+    const { navBorderBottom, changeNavBorderBottom } = useNavBorderBottom();
+      
+    useEffect(() => {
+        changeNavBorderBottom({
+            technologyBorderBottom: true,
+        })
+    }, [])
+  
     const vehicle = (e) => {
         setName(technologyData[0].name);
         setDescription(technologyData[0].description);

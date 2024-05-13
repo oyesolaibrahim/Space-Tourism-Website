@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Moon from "../../assets/destination/image-moon.png"
 import Mars from "../../assets/destination/image-mars.png"
 import Europa from "../../assets/destination/image-europa.png"
@@ -14,7 +14,7 @@ const Destination_Header = ({destinationsData}) => {
     const [description, setDescription] = useState(destinationsData[0].description)
     const [travel, setTravel] = useState(destinationsData[0].travel)
     const [distance, setDistance] = useState(destinationsData[0].distance)
-
+    
   
 const moon = () => {
     setImage(Moon);

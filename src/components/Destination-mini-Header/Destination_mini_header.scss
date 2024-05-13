@@ -31,8 +31,8 @@
            width: 65px;
            margin-left: 36px;
        }
-       div hr.hr-titan {
-           width: 1420px;
+       hr.hr-titan {
+           width: 47px;
            margin-left: 36px;
        }
     }
@@ -92,30 +92,30 @@
 
 @media screen and (max-width:600px) {
     .planet {
-        div hr.hr-moon {
-            width: 85px;
+        div.column hr.hr-moon {
+            width: 70px;
             margin-left: 36px;
         }
          
-        div hr.hr-mars {
-            width: 80px;
-            margin-left: 0px;
-        } 
-        div hr.hr-europa {
-            width: 85px;
-            margin-left: 0px;
-        } 
-        div hr.hr-titan {
-            width: 63px;
+        div.column hr.hr-mars {
+            width: 60px;
             margin-left: 36px;
+        } 
+        div.column hr.hr-europa {
+            width: 78px;
+            margin-left: 36pxpx;
+        } 
+        div.column hr.hr-titan {
+            width: 65px;
+            margin-left: 30px;
         }
     }
 }
 @media screen and (max-width: 545px) {
     .planet {
-        div hr.hr-moon {
-            width: 65px;
-            margin-left: 10px;
+        div.column hr.hr-moon {
+            width: 55px;
+            margin-left: 15px;
         }
          
         div.column hr.hr-mars {
@@ -126,7 +126,7 @@
             width: 70px;
             margin-left: 10px;
         } 
-        div hr.hr-titan {
+        div.column hr.hr-titan {
             width: 55px;
             margin-left: 10px;
         }
